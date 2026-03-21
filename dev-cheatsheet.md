@@ -28,3 +28,10 @@
 - `Command + Shift + X` → Open extensions
 - `Command + Shift + P` → Open command palette
 - `code filename` → Open a file in VS Code from terminal
+
+## GitHub — Connecting & Pushing
+- `ssh-keygen -t ed25519 -C "email"` → Creates your SSH key (once)
+- `pbcopy < ~/.ssh/id_ed25519.pub` → Copies your SSH key to clipboard (once)
+- `git remote add origin git@github.com:username/repo.git` → Links local project to GitHub
+- `git push -u origin main` → First push to GitHub
+- `git push` → Every push after the first one
