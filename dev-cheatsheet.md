@@ -35,3 +35,14 @@
 - `git remote add origin git@github.com:username/repo.git` → Links local project to GitHub
 - `git push -u origin main` → First push to GitHub
 - `git push` → Every push after the first one
+
+## Python Libraries — Data Workflow
+- `pip install pandas openpyxl jupyter` → Install core data libraries
+- `pandas` → Data manipulation (like Excel but in Python)
+- `openpyxl` → Read and write Excel files
+- `jupyter` → Interactive notebook for running code block by block
+
+## VS Code Extensions — Installed
+- Pylance → Smarter Python suggestions
+- Rainbow CSV → Color coded CSV files
+- SQLTools → Write and run SQL inside VS Code
