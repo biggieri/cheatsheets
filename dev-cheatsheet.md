@@ -106,3 +106,23 @@
 ## Exporting Data
 - `df.to_excel("file.xlsx", index=False)` → Export to Excel
 - `df.to_csv("file.csv", index=False)` → Export to CSV
+
+## Advanced Pandas
+- `df["col"].diff()` → Difference between each row and previous — like MoM change
+- `df["col"].pct_change()` → Percentage change between each row and previous
+- `df.drop_duplicates(subset=["col"])` → Remove duplicates based on specific columns
+- `pd.ExcelWriter("file.xlsx", engine="openpyxl")` → Write multiple sheets to one Excel file
+- `df.to_excel(writer, sheet_name="Sheet Name")` → Export DataFrame to a specific sheet
+- `df["col"].nunique()` → Count of unique values in a column
+- `df["col"].mean()` → Average of a column
+
+## NumPy
+- `import numpy as np` → Import NumPy library
+- `np.where(condition, "if true", "if false")` → Like Excel IF() — flag values conditionally
+- `np.random.seed(42)` → Set random seed for reproducibility
+
+## Dates
+- `pd.to_datetime(df["col"])` → Convert a column to datetime format
+- `df["col"].dt.to_period("M")` → Extract year-month from a date column
+- `datetime(2025, 1, 1)` → Create a specific date
+- `timedelta(days=n)` → Add or subtract days from a date
