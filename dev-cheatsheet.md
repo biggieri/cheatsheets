@@ -46,3 +46,63 @@
 - Pylance → Smarter Python suggestions
 - Rainbow CSV → Color coded CSV files
 - SQLTools → Write and run SQL inside VS Code
+
+## Python Built-ins
+- `print(value)` → Prints value to screen
+- `len(list)` → Counts items in a list
+- `range(n)` → Generates sequence 0 to n-1
+- `round(number, 2)` → Rounds to 2 decimal places
+- `f"{variable}"` → Inserts variable into a string
+- `def name(params):` → Defines a reusable function
+- `return value` → Sends value back from a function
+- `for x in list:` → Loops through every item in a list
+- `if x > y: else:` → Decision maker — like Excel IF()
+- `None` → Represents no value — like an empty cell
+- `\n` → New line character inside a string
+
+## Loading & Inspecting Data
+- `pd.read_csv("file.csv")` → Load a CSV file into a DataFrame
+- `pd.DataFrame(data)` → Create a DataFrame from a list of dicts
+- `df.head()` → Show first 5 rows
+- `df.tail()` → Show last 5 rows
+- `df.shape` → Returns (rows, columns) count
+- `df.columns` → Lists all column names
+- `df.dtypes` → Shows data type of each column
+
+## Cleaning Data
+- `df.isnull()` → Shows True/False for missing values
+- `df.isnull().sum()` → Counts missing values per column
+- `df.dropna()` → Drops all rows with missing values
+- `df.dropna(subset=["col"])` → Drops rows missing a specific column
+- `df["col"].fillna(0)` → Fills missing values with 0
+- `df.copy()` → Makes an independent copy of the DataFrame
+- `df.duplicated(subset=["col"])` → Flags duplicate rows
+- `df.drop_duplicates()` → Removes duplicate rows
+- `df["col"].str.title()` → Title Case — like Excel PROPER()
+- `df["col"].str.lower()` → Converts text to lowercase
+- `df["col"].str.upper()` → Converts text to UPPERCASE
+- `df["col"].str.strip()` → Removes leading/trailing spaces
+
+## Filtering & Sorting
+- `df[df["col"] > value]` → Filter rows where condition is true
+- `df[df["col"] == "value"]` → Filter rows matching exact value
+- `df.sort_values("col")` → Sort ascending by column
+- `df.sort_values("col", ascending=False)` → Sort descending
+
+## Summarizing & Grouping
+- `df.groupby("col").agg(...)` → Group and summarize — like a pivot table
+- `df["col"].sum()` → Sum of a column
+- `df["col"].mean()` → Average of a column
+- `df["col"].min()` → Minimum value in a column
+- `df["col"].max()` → Maximum value in a column
+- `df["col"].count()` → Count of non-null values
+
+## Merging DataFrames
+- `pd.merge(df1, df2, on="col", how="inner")` → Only matching rows — INNER JOIN
+- `pd.merge(..., how="left")` → All left rows — LEFT JOIN
+- `pd.merge(..., how="outer")` → All rows from both — FULL OUTER JOIN
+- `pd.merge(..., left_on="a", right_on="b")` → Join on differently named columns
+
+## Exporting Data
+- `df.to_excel("file.xlsx", index=False)` → Export to Excel
+- `df.to_csv("file.csv", index=False)` → Export to CSV
